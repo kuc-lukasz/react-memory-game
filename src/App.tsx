@@ -3,6 +3,7 @@ import { SingleCartType } from "./components/CardType";
 import "./App.css";
 import { createdMemoryBoard } from "./components/CardType";
 import { Card } from "./components/Card";
+import { Grid } from "./styled/Card.styles";
 
 function App() {
     const [cards, setCards] = useState<SingleCartType[]>(createdMemoryBoard());
@@ -11,13 +12,13 @@ function App() {
         console.log("clicked");
     };
     return (
-        <div className="App">
+        <Grid>
             {cards.map((card) => {
                 return (
                     <Card key={card.id} card={card} callback={handleClick} />
                 );
             })}
-        </div>
+        </Grid>
     );
 }
 

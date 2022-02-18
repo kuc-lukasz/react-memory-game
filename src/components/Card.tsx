@@ -1,6 +1,6 @@
 import React from "react";
 import { SingleCartType } from "./CardType";
-import { Wrapper, FrontImg, BackImg } from "./Card.styles";
+import { Wrapper, FrontImg, BackImg } from "../styled/Card.styles";
 
 type Props = {
     card: SingleCartType;
