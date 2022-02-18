@@ -20,6 +20,7 @@ const sharedStyles = css`
     backface-visibility: hidden;
     cursor: pointer;
     transform-style: preserve-3d;
+    border-radius: 10px;
 `;
 
 export const FrontImg = styled.img<Props>`
@@ -40,6 +41,11 @@ export const BackImg = styled.img<Props>`
 `;
 
 export const Grid = styled.div`
+    margin: 20px;
+    padding: 20px;
+    background-color: lightgray;
+    box-shadow: 0px 0px 5px 1px black;
+    border-radius: 5px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 0.5rem;

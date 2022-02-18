@@ -8,8 +8,15 @@ import { Grid } from "./styled/Card.styles";
 function App() {
     const [cards, setCards] = useState<SingleCartType[]>(createdMemoryBoard());
     console.log(cards);
-    const handleClick = () => {
-        console.log("clicked");
+
+    const handleClick = (currentCard: SingleCartType) => {
+        setCards((prev) =>
+            prev.map((card) => {
+                return card.id === currentCard.id
+                    ? { ...card, isFlipped: true, clickable: false }
+                    : card;
+            })
+        );
     };
     return (
         <Grid>
