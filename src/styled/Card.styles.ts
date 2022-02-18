@@ -49,4 +49,33 @@ export const Grid = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 0.5rem;
+    position: relative;
+`;
+
+export const WinAlert = styled.div`
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: gray;
+    font-size: large;
+    color: black;
+    border: 3px solid black;
+    border-radius: 10px;
+    z-index: 5;
+    & > button {
+        background-color: black;
+        width: 150px;
+        height: 50px;
+        font-size: medium;
+        color: white;
+        border-radius: 10px;
+        border: none;
+    }
 `;
