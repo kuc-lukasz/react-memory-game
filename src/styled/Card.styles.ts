@@ -48,27 +48,28 @@ export const Grid = styled.div`
     border-radius: 5px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-gap: 0.5rem;
+    grid-gap: 1rem;
     position: relative;
 `;
 
 export const WinAlert = styled.div`
     position: absolute;
-    left: 25%;
-    right: 25%;
-    top: 25%;
-    height: 300px;
+    left: -2%;
+    right: -2%;
+    top: -2%;
+    bottom: -2%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-    background-color: gray;
+    background-color: #909090de;
     font-size: large;
     color: black;
     border: 3px solid black;
     border-radius: 10px;
     z-index: 5;
+    text-transform: uppercase;
     & > button {
         background-color: black;
         width: 150px;
@@ -77,5 +78,7 @@ export const WinAlert = styled.div`
         color: white;
         border-radius: 10px;
         border: none;
+        text-transform: uppercase;
+        cursor: pointer;
     }
 `;

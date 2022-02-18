@@ -3,11 +3,14 @@ import { SingleCartType } from "./components/CardType";
 import "./App.css";
 import { createdMemoryBoard } from "./components/CardType";
 import { Card } from "./components/Card";
-import { Grid, WinAlert } from "./styled/Card.styles";
+import { Grid } from "./styled/Card.styles";
 import { Alert } from "./components/WonAlert";
+import { ShuffleCards } from "./components/Shuffle";
 
 function App() {
-    const [cards, setCards] = useState<SingleCartType[]>(createdMemoryBoard());
+    const [cards, setCards] = useState<SingleCartType[]>(
+        ShuffleCards(createdMemoryBoard())
+    );
     const [clickedCard, setClickedCard] = useState<undefined | SingleCartType>(
         undefined
     );
@@ -17,7 +20,6 @@ function App() {
     useEffect(() => {
         if (matchCardCounter === cards.length / 2) {
             setWon(true);
-            console.log("WINNNEEER!");
         }
     }, [matchCardCounter]);
 
@@ -74,6 +76,7 @@ function App() {
         );
         setWon(false);
         setMatchCounter(0);
+        ShuffleCards(cards);
     };
     return (
         <>
