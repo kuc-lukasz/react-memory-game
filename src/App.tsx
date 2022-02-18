@@ -21,7 +21,7 @@ function App() {
         if (matchCardCounter === cards.length / 2) {
             setWon(true);
         }
-    }, [matchCardCounter]);
+    }, [matchCardCounter, cards.length]);
 
     const handleClick = (currentCard: SingleCartType) => {
         //funkcja która sprawia, że kliknięta karta zmieni isFlipped co spowoduje odwrócenie karty
