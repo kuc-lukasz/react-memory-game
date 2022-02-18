@@ -2,7 +2,9 @@ import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
     position: relative;
-    perspective: 1000px;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
     .front.flipped {
         z-index: 1;
         transform: rotateY(180deg);
@@ -41,14 +43,18 @@ export const BackImg = styled.img<Props>`
 `;
 
 export const Grid = styled.div`
-    margin: 20px;
+    max-width: 900px;
+    max-height: 900px;
+    margin: 20px auto;
     padding: 20px;
     background-color: lightgray;
     box-shadow: 0px 0px 5px 1px black;
     border-radius: 5px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     position: relative;
 `;
 
@@ -81,4 +87,11 @@ export const WinAlert = styled.div`
         text-transform: uppercase;
         cursor: pointer;
     }
+`;
+export const Header = styled.h1`
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    color: lightgray;
+    text-transform: uppercase;
 `;

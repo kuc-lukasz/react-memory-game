@@ -3,7 +3,7 @@ import { SingleCartType } from "./components/CardType";
 import "./App.css";
 import { createdMemoryBoard } from "./components/CardType";
 import { Card } from "./components/Card";
-import { Grid } from "./styled/Card.styles";
+import { Grid, Header } from "./styled/Card.styles";
 import { Alert } from "./components/WonAlert";
 import { ShuffleCards } from "./components/Shuffle";
 
@@ -69,6 +69,7 @@ function App() {
     };
 
     const handleBtnClick = () => {
+        setCards(ShuffleCards(cards));
         setCards((prev) =>
             prev.map((card) => {
                 return { ...card, isFlipped: false, clickable: true };
@@ -76,10 +77,10 @@ function App() {
         );
         setWon(false);
         setMatchCounter(0);
-        ShuffleCards(cards);
     };
     return (
         <>
+            <Header>Memory Game - React</Header>
             <Grid>
                 {won && <Alert handleBtnClick={handleBtnClick} />}
                 {cards.map((card) => {
