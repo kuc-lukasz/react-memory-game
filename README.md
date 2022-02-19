@@ -6,5 +6,5 @@ Link to game:
 https://kuclukasz-react-memory-game.netlify.app/
 
 Photos from project
-<img src="./projectsImgs/reactMemoryGame.png">
-<img src="./projectsImgs/reactMemoryGameEnd.png">
+<img src="./projectImages/reactMemoryGame.png">
+<img src="./projectImages/reactMemoryGameEnd.png">
